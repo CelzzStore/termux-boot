@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Info Bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .info {
+      margin-top: 20px;
+    }
+    .info p {
+      margin: 8px 0;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Info Bot</h1>
+    <div class="info">
+      <p><span class="label">Owner:</span> <span id="owner"></span></p>
+      <p><span class="label">Author:</span> <span id="author"></span></p>
+      <p><span class="label">Packname:</span> <span id="packname"></span></p>
+      <p><span class="label">Session Name:</span> <span id="sessionName"></span></p>
+      <p><span class="label">Bot Version:</span> <span id="versionbot"></span></p>
+    </div>
+  </div>
+
+  <script>
+    const config = {
+      owner: ["6282170650203"],
+      author: "CelzzStore",
+      packname: "Push-Kontak",
+      sessionName: "Bot-Session",
+      versionbot: "1.2.0"
+    };
+
+    document.getElementById("owner").textContent = config.owner.join(", ");
+    document.getElementById("author").textContent = config.author;
+    document.getElementById("packname").textContent = config.packname;
+    document.getElementById("sessionName").textContent = config.sessionName;
+    document.getElementById("versionbot").textContent = config.versionbot;
+  </script>
+</body>
+</html>
